@@ -1,0 +1,34 @@
+
+a{
+    color: #fff;
+    text-decoration: none;
+
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+li{
+    list-style: none;
+}
+
+
+img {
+    width: 15rem;
+}
+
+svg{
+    width: 2rem;
+    height: 2rem;
+}
+
+button{
+    border: none;
+    background-color: transparent;
+
+}
+
+.center-width{
+    margin: 0 auto;
+    width: 90rem;
+    max-width: 100%;
+}

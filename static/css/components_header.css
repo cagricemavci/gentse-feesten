@@ -1,0 +1,288 @@
+.nav__top {
+    background-image: url('https://gentsefeesten.stad.gent/themes/custom/gf_theme/build/img/jpg/Gentse-feesten-08.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    padding: 1rem;
+    height: 75vh;
+}
+@media (min-width:80rem) {
+    .nav__top {
+        height: 90vh;
+    }
+}
+.nav__brand {
+    width: 10rem;
+}
+
+@media (min-width:50rem) {
+    .nav__brand {
+        width: 15rem;
+    }
+}
+
+.nav__brand img {
+    max-width: 100%;
+}
+
+.nav__items-container {
+    /* insert javascript to make it visible */
+    display: none;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 99;
+    overflow-y: auto;
+}
+
+@media(min-width: 80rem) {
+    .nav__items-container {
+        position: static;
+        background-color: transparent;
+
+        display: flex;
+        justify-content: flex-end;
+
+    }
+}
+
+.nav__items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.nav__close-btn {
+    padding: 1rem;
+    flex-basis: 100%;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+@media(min-width: 80rem) {
+    .nav__close-btn {
+        display: none;
+    }
+}
+
+.nav__items-list {
+    flex-basis: 100%;
+
+    padding: 0 3rem;
+}
+
+@media(min-width: 80rem) {
+    .nav__items-list {
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+
+.nav__items-list li {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+@media (min-width:80rem) {
+    .nav__items-list li {
+        margin: 1rem 1rem;
+    }
+
+    .nav__items-list svg {
+        display: none;
+    }
+}
+
+
+
+.nav__item-search {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.nav__item-search svg {
+    margin-right: 1rem;
+}
+
+.program-tag {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.program-tag a {
+    margin-right: 3rem;
+}
+
+@media(min-width:80rem) {
+    .program-tag a {
+        margin-right: 0;
+    }
+}
+
+.nav__program-items {
+    /* insert javascript to make it visible */
+    display: none;
+    margin-left: 3rem;
+
+}
+
+.nav__program-items a {
+    font-weight: lighter;
+    font-size: 1.5rem;
+}
+
+@media(min-width: 80rem) {
+    .nav__hamburger {
+        display: none;
+    }
+}
+
+/* ----------------navbottom---------------- */
+
+@media(min-width: 80rem) {
+    .nav__bottom {
+        position: absolute;
+        bottom: 2rem;
+        right: 0rem;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+}
+
+.hashtag {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+
+    padding: 2rem 1rem;
+}
+
+@media(min-width: 80rem) {
+    .hashtag{
+        flex-basis: 100%;
+        justify-content: flex-end;
+        align-items: flex-end;
+        flex-wrap: nowrap;
+    }
+}
+
+.hashtag-top {
+    flex-basis: 100%;
+}
+
+@media(min-width: 80rem) {
+    .hashtag-top{
+        flex-basis: auto;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        transform: translateX(70%) translateY(30%) rotate(-90deg);
+        transform-origin: left;
+    }
+}
+
+.hashtag-top svg {
+    width: 10rem;
+    height: auto;
+}
+@media(min-width: 80rem) {
+    .hashtag-top svg {
+        
+    }
+}
+
+@media(min-width: 80rem) {
+    .hashtag svg{
+        fill: #fff;
+    }
+}
+
+
+.hashtag-bottom svg {
+    width: 18rem;
+    height: auto;
+}
+
+.days {
+    background-color: #000;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+    margin-bottom: 3rem;
+
+}
+
+@media(min-width:80rem) {
+    .days {
+        width: 20rem;
+        background-color: #fff;
+    }
+}
+
+.days li {
+    padding: 1rem;
+    flex-basis: 20%;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+@media(min-width:50rem) {
+    .days li {
+        flex-basis: 10%;
+    }
+}
+
+@media(min-width:80rem) {
+    .days li {
+        flex-basis: 50%;
+        color: #000;
+    }
+}
+
+.days a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    text-align: center;
+}
+
+@media(min-width:80rem) {
+    .days a {
+        color: #000;
+    }
+}
+
+.day--text {
+    flex-basis: 100%
+}
+
+.day--num {
+    font-weight: lighter;
+    font-size: 1rem;
+}
