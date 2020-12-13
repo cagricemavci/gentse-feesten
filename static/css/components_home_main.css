@@ -1,0 +1,153 @@
+.random__cards-container{
+    padding: 1rem;
+}
+
+
+.random__cards{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.random__card{
+    margin: 0.5rem;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 22rem;
+    max-width: 100%;
+
+    
+}
+
+.random-card__top img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.random-card__bottom{
+    color: #000;
+    margin-left: 3rem;
+    position: relative;
+
+    top: -1.5rem;
+
+}
+
+.random-card__bottom time{
+    background-color: #000;
+    color: #fff;
+    padding: 0.8rem 1rem;
+    margin-bottom: 1rem;
+}
+
+.random-card__bottom h3{
+    font-size: 2.4rem;
+    margin-top: 2rem;
+    margin-bottom: 1.2rem;
+  
+    font-weight: 700;
+    
+}
+
+.random-card__bottom p{
+    font-weight: lighter;
+    font-style: normal;
+}
+
+
+/* --------------------rdtgfd------------ */
+
+
+.news__cards__container{
+    padding: 1rem;
+    margin-bottom: 4rem;
+}
+
+.news__cards{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    margin-bottom: 3rem;
+}
+
+.news__card{
+    flex-grow: 1;
+    flex-basis: 100%;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.news__card__top{
+    flex-basis: 100%;
+    position: relative;
+}
+
+@media(min-width: 62rem) {
+    .news__card__top{
+    flex-basis: 50%;
+    margin-right: 3rem;
+    }
+}
+
+.news__card__top img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
+.news__card__top p{
+    position: absolute;
+    bottom: 0rem;
+
+    background-color: #fff;
+    padding: 0.8rem 1rem;
+    font-size: 2rem;
+}
+
+@media(min-width: 62rem) {
+    .news__card__top p{
+        position: absolute;
+        bottom: 50%;
+        transform: translateX(-30%) rotate(-90deg);
+
+
+    }
+}
+
+.news__card__bottom h3{
+    font-size: 2.4rem;
+    margin-top: 2rem;
+    margin-bottom: 1.2rem;
+  
+    font-weight: 700;
+}
+
+.news__card__bottom p{
+    font-size: 1.5rem;
+    font-weight: lighter;
+    font-style: normal;
+    margin-bottom: 1.2rem;
+}
+
+.news__card__bottom svg{
+   width: 2rem;
+}
+.news__cards__show-more{
+   display: inline;
+}
+.news__cards__show-more a{
+    color: #000;
+    border: 3px solid #000;
+    display: inline;
+    padding: 1.6rem 2rem;
+}

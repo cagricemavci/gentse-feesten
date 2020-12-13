@@ -7,7 +7,8 @@
 
     <link rel="stylesheet" href="static/css/main.css">
     <link rel="stylesheet" href="static/css/elements.css">
-    <link rel="stylesheet" href="static/css/components_header.css">
+    <link rel="stylesheet" href="static/css/components_home_header.css">
+    <link rel="stylesheet" href="static/css/components_home_main.css">
 </head>
 <body>
     <header>
@@ -176,51 +177,84 @@
     </header>
 
     <main>
-        <article class="random-cards">
-            <section class="random-card">
-                <div class="random-card__top">
-                    <img src="https://gentsefeesten.stad.gent/sites/default/files/styles/event_teaser/public/activity/image/foto%20ariane%20kleerpop.jpg?itok=Tiie9xu7" alt="random 1">
-                </div>
-                <div class="random-card__bottom">
-                    <p>Vr 17 Jul 06.00 u.</p>
-                    <h3>zomerfoor</h3>
-                    <p>Floraliënhal</p>
-                </div>
-            </section>
-            <section class="random-card">
-                <div class="random-card__top">
-                    <img src="https://gentsefeesten.stad.gent/sites/default/files/styles/event_teaser/public/activity/image/foto%20ariane%20kleerpop.jpg?itok=Tiie9xu7" alt="random 1">
-                </div>
-                <div class="random-card__bottom">
-                    <p>Vr 17 Jul 06.00 u.</p>
-                    <h3>zomerfoor</h3>
-                    <p>Floraliënhal</p>
-                </div>
-            </section>
-            <section class="random-card">
-                <div class="random-card__top">
-                    <img src="https://gentsefeesten.stad.gent/sites/default/files/styles/event_teaser/public/activity/image/foto%20ariane%20kleerpop.jpg?itok=Tiie9xu7" alt="random 1">
-                </div>
-                <div class="random-card__bottom">
-                    <p>Vr 17 Jul 06.00 u.</p>
-                    <h3>zomerfoor</h3>
-                    <p>Floraliënhal</p>
-                </div>
-            </section>
+        <article class="random__cards-container">
+            <ul class="random__cards">
+                <li class="random__card">
+                    <a href="#">
+                        <div class="random-card__top">
+                            <img src="https://gentsefeesten.stad.gent/sites/default/files/styles/event_teaser/public/activity/image/foto%20ariane%20kleerpop.jpg?itok=Tiie9xu7" alt="random 1">
+                        </div>
+                        <div class="random-card__bottom">
+                            <time datetime="2019-07-17">Vr 17 Jul 06.00 u.</time>
+                            <h3>zomerfoor</h3>
+                            <p>Floraliënhal</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="random__card">
+                    <a href="#">
+                        <div class="random-card__top">
+                            <img src="https://gentsefeesten.stad.gent/sites/default/files/styles/event_teaser/public/activity/image/foto%20ariane%20kleerpop.jpg?itok=Tiie9xu7" alt="random 1">
+                        </div>
+                        <div class="random-card__bottom">
+                            <time datetime="2019-07-17">Vr 17 Jul 06.00 u.</time>
+                            <h3>zomerfoor</h3>
+                            <p>Floraliënhal</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="random__card">
+                    <a href="#">
+                        <div class="random-card__top">
+                            <img src="https://gentsefeesten.stad.gent/sites/default/files/styles/event_teaser/public/activity/image/foto%20ariane%20kleerpop.jpg?itok=Tiie9xu7" alt="random 1">
+                        </div>
+                        <div class="random-card__bottom">
+                            <time datetime="2019-07-17">Vr 17 Jul 06.00 u.</time>
+                            <h3>zomerfoor</h3>
+                            <p>Floraliënhal</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
         </article>
-        <article class="news-cards">
-            <section class="news-card">
-                <div>
-                    <img src="https://gentsefeesten.stad.gent/sites/default/files/styles/event_teaser/public/activity/image/foto%20ariane%20kleerpop.jpg?itok=Tiie9xu7" alt="">
-                    <p>08/07</p>
-                </div>
-                <div>
-                    <h3>zomerfoor</h3>
-                    <p>deze jokesdgdsdsdgs</p>
-                    <a href=""><svg></svg></a>
-                </div>
-            </section>
-            <section class="news-cards__show-more">
+        <article class="news__cards__container">
+            <ul class="news__cards">
+                <li class="news__card">
+                    <div class="news__card__top">
+                        <img src="https://gentsefeesten.stad.gent/sites/default/files/styles/event_teaser/public/activity/image/foto%20ariane%20kleerpop.jpg?itok=Tiie9xu7" alt="">
+                        <p>08/07</p>
+                    </div>
+                    <div class="news__card__bottom">
+                        <h3>zomerfoor</h3>
+                        <p>deze jokesdgdsdsdgs</p>
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg"><path d="M8.683 0L6.785 1.885l4.118 4.118H0v2.661h10.903l-4.118 4.117 1.898 1.886L16 7.333z" fill="#000" fill-rule="nonzero"/></svg></a>
+                    </div>
+                </li>
+                <li class="news__card">
+                    <div class="news__card__top">
+                        <img src="https://gentsefeesten.stad.gent/sites/default/files/styles/event_teaser/public/activity/image/foto%20ariane%20kleerpop.jpg?itok=Tiie9xu7" alt="">
+                        <p>08/07</p>
+                    </div>
+                    <div class="news__card__bottom">
+                        <h3>zomerfoor</h3>
+                        <p>deze jokesdgdsdsdgs</p>
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg"><path d="M8.683 0L6.785 1.885l4.118 4.118H0v2.661h10.903l-4.118 4.117 1.898 1.886L16 7.333z" fill="#000" fill-rule="nonzero"/></svg></a>
+                    </div>
+                </li>
+                <li class="news__card">
+                    <div class="news__card__top">
+                        <img src="https://gentsefeesten.stad.gent/sites/default/files/styles/event_teaser/public/activity/image/foto%20ariane%20kleerpop.jpg?itok=Tiie9xu7" alt="">
+                        <p>08/07</p>
+                    </div>
+                    <div class="news__card__bottom">
+                        <h3>zomerfoor</h3>
+                        <p>deze jokesdgdsdsdgs</p>
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg"><path d="M8.683 0L6.785 1.885l4.118 4.118H0v2.661h10.903l-4.118 4.117 1.898 1.886L16 7.333z" fill="#000" fill-rule="nonzero"/></svg></a>
+                    </div>
+                </li>
+            </ul>
+        
+            <section class="news__cards__show-more">
                 <a href="">Bekijk alle nieuwsberichten</a>
             </section>
         </article>
