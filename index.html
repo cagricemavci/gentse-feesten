@@ -258,61 +258,76 @@
                 <a href="">Bekijk alle nieuwsberichten</a>
             </section>
         </article>
-        <article class="slider">
-            <ul>
-                <li>
-                    <picture>
-                        <img src="https://gentsefeesten.stad.gent/sites/default/files/styles/event_teaser/public/activity/image/foto%20ariane%20kleerpop.jpg?itok=Tiie9xu7" alt="">
-                    </picture>
-                </li>
-                <li>
-                    <picture>
-                        <img src="https://gentsefeesten.stad.gent/sites/default/files/styles/event_teaser/public/activity/image/foto%20ariane%20kleerpop.jpg?itok=Tiie9xu7" alt="">
-                    </picture>
-                </li>
-                <li>
+        <article class="slider__container">
+            <ul class="slider">
+                <li class="slide">
                     <picture>
                         <img src="https://gentsefeesten.stad.gent/sites/default/files/styles/event_teaser/public/activity/image/foto%20ariane%20kleerpop.jpg?itok=Tiie9xu7" alt="">
                     </picture>
                 </li>
             </ul>
+            <div class="slider__navigation">
+                <div class="slider__left">
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg"><path d="M8.683 0L6.785 1.885l4.118 4.118H0v2.661h10.903l-4.118 4.117 1.898 1.886L16 7.333z" fill="#000" fill-rule="nonzero"/></svg></a>
+                </div>
+                <div class="slider__right">
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg"><path d="M8.683 0L6.785 1.885l4.118 4.118H0v2.661h10.903l-4.118 4.117 1.898 1.886L16 7.333z" fill="#000" fill-rule="nonzero"/></svg></a>
+                </div>
+                <div class="slider__posiiton">
+                    <p>
+                        4/10
+                    </p>
+                </div>
+            </div>
         </article>
-        <article class="twitter-feed">
-            <section class="twitter__top">
-                <div>
+        <article class="twitter__feed-container">
+            
+            <div class="twitter__top">
+                <div class="tweet__image">
                     <img src="https://gentsefeesten.stad.gent/sites/default/files/styles/event_teaser/public/activity/image/foto%20ariane%20kleerpop.jpg?itok=Tiie9xu7" alt="">
                 </div>
-                <div>
-                    <h3>beleef</h3>
-                    <svg></svg>
+            </div>
+            <div class="twitter__bottom">
+                <div class="tweet__tag">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 410.9 100.24"><g id="Laag_2" data-name="Laag 2"><g id="Laag_1-2" data-name="Laag 1"><path d="M20.44,83.72H12c2.8,4.06,6,9.38,6,14.28H0V0H19.88V13.72c0,16.66-4.2,23.24-7.7,28.7h8.4c3.08-7.14,9.1-16.52,23.52-16.52,17.08,0,28.84,15,28.84,37.1S61.18,100.24,44.1,100.24C29.26,100.24,23.94,90.72,20.44,83.72ZM52.08,63c0-16.38-7.14-22.12-16.38-22.12C25.76,40.88,19,48.16,19,63S25.9,85.12,35.7,85.12C44.94,85.12,52.08,79.38,52.08,63Z"/><path d="M83.16,62.86c0-22,15.12-37,35.42-37,23.52,0,35.84,18.48,33.88,41.86H103c.56,12.32,7.14,17.36,15.68,17.36,9,0,13.3-5.6,16.24-12.18l17.78,6.86c-3.92,9-12.74,20.44-34,20.44C97.16,100.24,83.16,85.82,83.16,62.86Zm49.7-9.1C132,45.08,127,40.18,118.58,40.18c-8,0-13.44,4.76-14.84,13.58Z"/><path d="M167.58,0h19.88V98H167.58Z"/><path d="M202.16,62.86c0-22,15.12-37,35.42-37,23.52,0,35.84,18.48,33.88,41.86H222c.56,12.32,7.14,17.36,15.68,17.36,9,0,13.3-5.6,16.24-12.18l17.78,6.86c-3.92,9-12.74,20.44-34,20.44C216.16,100.24,202.16,85.82,202.16,62.86Zm49.7-9.1C251,45.08,246,40.18,237.58,40.18c-8,0-13.44,4.76-14.84,13.58Z"/><path d="M282,62.86c0-22,15.12-37,35.42-37,23.52,0,35.84,18.48,33.88,41.86H301.84c.56,12.32,7.14,17.36,15.68,17.36,9,0,13.3-5.6,16.24-12.18l17.78,6.86c-3.92,9-12.74,20.44-34,20.44C296,100.24,282,85.82,282,62.86Zm49.7-9.1c-.84-8.68-5.88-13.58-14.28-13.58-8,0-13.44,4.76-14.84,13.58Z"/><path d="M371.84,43.12H358.26V28h13.58V18.34C371.84,7.42,378,0,389.34,0H410.9V15.82h-13c-4.34,0-6.16,2-6.16,6.16v6H408V43.12H391.72V98H371.84Z"/></g></g></svg>
+                    <svg class="twitter-icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M21.37 7.277c.014.21.014.419.014.628 0 6.391-4.864 13.755-13.755 13.755-2.739 0-5.283-.793-7.424-2.17.39.045.764.06 1.168.06 2.26 0 4.34-.763 6.002-2.066a4.843 4.843 0 01-4.52-3.352c.299.045.598.074.913.074.434 0 .868-.06 1.272-.164a4.835 4.835 0 01-3.877-4.745v-.06c.644.36 1.392.584 2.185.614a4.831 4.831 0 01-2.155-4.026c0-.898.24-1.721.659-2.44a13.742 13.742 0 009.968 5.059 5.46 5.46 0 01-.12-1.108 4.832 4.832 0 014.835-4.834c1.392 0 2.649.584 3.532 1.527a9.518 9.518 0 003.068-1.168 4.821 4.821 0 01-2.125 2.664 9.692 9.692 0 002.784-.748 10.391 10.391 0 01-2.425 2.5z" fill="#000" fill-rule="nonzero"/></svg>
                 </div>
-                <div>
-                    <p>volg @gentsefeesten</p>
+                <div class="tweet__follow">
+                    <h2>volg @gentsefeesten</h2>
                 </div>
-                <div class="tweet__content">
-                    <p>
-                        sjfhdskjgdsg kgfjskdjhfgkdsjsdfdsfs
-                    </p>
-                    <div>
-                        <p>@chicihci</p>
-                        <p>1 uur 15min geleden</p>
-                    </div>
+                <div class="tweet__content-container">
+                    <ul  class="tweet__content">
+                        <li class="tweet">
+                            <div class="tweet__text">
+                                <p>Perdona loro Nesli #GF20</p>
+                            </div>
+                            <div class="tweet__sender">
+                                <p>@maccarimiranda 5 dagen 7 uur geleden</p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-                <div class="twitter__dots">
-                    <svg></svg>
+                <div class="twitter__dots-container">
+                    <ul class="twitter__dots">
+                        <li class="twitter__dot"></li>
+                        <li class="twitter__dot"></li>
+                        <li class="twitter__dot"></li>
+                    </ul>
                 </div>
-            </section>
-            <section class="twitter__bottom">
-                <div>
+            </div>
+        </article>
+        <article class="newsletter-container">
+            <section class="newsletter">
+                <div class="newsletter__top">
                     <h3>Blijf op de hoogte</h3>
-                    <p>abooneer je sdgfdsgqdsg</p>
-                    <p>abooneer je sdgfdsgqdsg</p>
+                    <p>Abonneer je op de nieuwsbrief van de Gentse Feesten</p>
+                    <p>De stad Gent zal de persoonsgegevens die u invult met respect voor uw privacy behandelen.</p>
                 </div>
     
-                <form action="">
-                    <label for="email">Emailadersss</label>
+                <form action="" class="newsletter__form">
+                    <label for="email">E-mailadersss</label>
                     <input type="email">
-                    <button type="submit">inschrijven</button>
+                    <button type="submit">Inschrijven</button>
                 </form>
             </section>
         </article>
