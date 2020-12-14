@@ -123,6 +123,11 @@
 
     }
 }
+@media(min-width: 62rem) {
+    .news__card__bottom{
+    flex-basis: 45%;
+    }
+}
 
 .news__card__bottom h3{
     font-size: 2.4rem;

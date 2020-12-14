@@ -7,6 +7,9 @@ a{
     font-weight: 700;
 }
 
+a:hover{
+    opacity: 0.8;
+}
 li{
     list-style: none;
 }
@@ -28,6 +31,10 @@ button{
 
 }
 
+button:hover{
+    opacity: 0.8;
+}
+
 .center-width{
     margin: 0 auto;
     width: 90rem;
@@ -42,4 +49,8 @@ button{
 
 .hidden{
     display: none;
+}
+
+.current{
+    border-bottom: 3px solid #fff;
 }
