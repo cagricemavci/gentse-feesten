@@ -53,4 +53,9 @@ button:hover{
 
 .current{
     border-bottom: 3px solid #fff;
+    background-color: #fff;
+}
+
+:focus{
+    border: 3px red dotted;
 }

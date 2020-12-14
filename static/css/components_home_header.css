@@ -293,7 +293,8 @@
     background-color: #000;
 }
 
-.days li:hover {
+.days li:hover,
+.days li:focus {
     background-color: #fff;
 
 }
@@ -311,7 +312,8 @@
         background-color: #fff;
     }
 
-    .days li:hover {
+    .days li:hover,
+    .days li:focus {
 
         background-color: #000;
     }
@@ -330,7 +332,8 @@
     text-align: center;
 }
 
-.days li:hover a {
+.days li:hover a,
+.days li:focus a {
     color: #000;
 }
 
@@ -339,7 +342,8 @@
         color: #000;
     }
 
-    .days li:hover a {
+    .days li:hover a,
+    .days li:focus a {
         color: #fff;
         opacity: 1;
     }
@@ -352,4 +356,22 @@
 .day--num {
     font-weight: lighter;
     font-size: 1rem;
+}
+
+.days li.current{
+    background-color: #fff;
+}
+
+.days li.current a{
+    color: #000;
+}
+
+@media (min-width: 80rem) {
+    .days li.current{
+        background-color: #000;
+    }
+    
+    .days li.current a{
+        color: #fff;
+    }
 }

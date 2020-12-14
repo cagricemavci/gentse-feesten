@@ -38,7 +38,7 @@
 
             $programDays.innerHTML = this.days.map((day) => {
                 return `
-                <li>
+                <li id="${day.dayNum}">
                 <a href="detail.html?day=${day.dayNum}">
                     <span class="day--text">${day.dayName.slice(0,2)}</span>
                     <span class="day--num">${day.dayNum} ${day.month}</span>
@@ -57,28 +57,63 @@
         getRandomEventCard(){
             let $randomCard = document.querySelector('.random__cards')
 
-            let str = "";
-            for (let i = 0; i < 3; i++) {
-                let randomEvent = this.events[this.generateRandomNum(this.events.length)];
-                console.log(randomEvent)
-                str += `
-                <li class="random__card">
-                <a href="detail.html?day=${randomEvent.day}">
-                    <div class="random-card__top">
-                        <img src="${randomEvent.image !== null ? randomEvent.image.thumb : 'static/media/images/me_gusta.jpg'}" alt="${randomEvent.slug}">
-                    </div>
-                    <div class="random-card__bottom">
-                        <time datetime="2019-07-17">${randomEvent.day_of_week.slice(0,2)} ${randomEvent.day} Jul ${randomEvent.start} u.</time>
-                        <h3>${randomEvent.title}</h3>
-                        <p>${randomEvent.location}</p>
-                    </div>
-                </a>
-            </li>`
-                
+            if ($randomCard != null) {
+                let str = "";
+                for (let i = 0; i < 3; i++) {
+                    let randomEvent = this.events[this.generateRandomNum(this.events.length)]; //laad drie random events op de pagina
+                    console.log(randomEvent)
+                    str += `
+                    <li class="random__card">
+                    <a href="detail.html?day=${randomEvent.day}&id=${randomEvent.id}">
+                        <div class="random-card__top">
+                            <img src="${randomEvent.image !== null ? randomEvent.image.thumb : 'static/media/images/me_gusta.jpg'}" alt="${randomEvent.slug}">
+                        </div>
+                        <div class="random-card__bottom">
+                            <time datetime="2019-07-17">${randomEvent.day_of_week.slice(0,2)} ${randomEvent.day} Jul ${randomEvent.start} u.</time>
+                            <h3>${randomEvent.title}</h3>
+                            <p>${randomEvent.location}</p>
+                        </div>
+                    </a>
+                </li>`
+                    
+                }
+
+                $randomCard.innerHTML = str;
             }
 
-            $randomCard.innerHTML = str;
+           
             
+        },
+        createDetailPage(){
+            //check if this is the detail page
+            let url = window.location.pathname;
+            let id, day = "";
+            let event = new Object; //the details of this event need to be shown
+            if(url == '/detail.html'){
+                //find the correct event + correct day
+                url = window.location.search;
+                id = new URLSearchParams(url).get('id')
+                day = new URLSearchParams(url).get('day')
+                
+                event = this.events.filter(event => event.id == id && event.day == day)
+
+                //highlight the day in the days list
+                let daysList = document.querySelectorAll('.days li')
+                console.log('this', daysList)
+                daysList.forEach(e => {
+                    if(e.id == day) {
+                        e.classList.add('current');
+                        e.focus();
+                    }
+                });
+
+                //add event details on the page
+
+            }
+             console.log(url, id, day, event)
+            
+           
+           
         },
         //FETCH FUNCTIONS
         loadEvents() {
@@ -97,6 +132,7 @@
         initializeAfterEvents() {
             this.getDays();
             this.getRandomEventCard();
+            this.createDetailPage();
         },
         //EVENTLISTENERFUNCTIONS
         showMenu(e) {
