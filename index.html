@@ -9,62 +9,81 @@
     <link rel="stylesheet" href="static/css/elements.css">
     <link rel="stylesheet" href="static/css/components_home_header.css">
     <link rel="stylesheet" href="static/css/components_home_main.css">
+    <link rel="stylesheet" href="static/css/components_home_footer.css">
 </head>
 <body>
-    <header>
+    <header class="">
         <nav class="nav__top">
             <nav class="nav__brand">
-                <a href="index.html"></a>
-                <img src="static/media/logo.svg" alt="logo gentse feesten">
+                <a href="index.html">
+                    <img src="static/media/logo.svg" alt="logo gentse feesten">
+                </a>
             </nav>
-            <div class="nav__items-container">
-                <nav class="nav__items">
-                <div class="nav__close-btn">
-                    <button>
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16 12.7759L10.4567 7.58087L15.9233 2.33963L13.4587 0L7.984 5.26402L2.444 0.0727774L0 2.39279L5.54733 7.60745L0.0766667 12.8683L2.52067 15.1883L8.012 9.9243L13.5353 15.1155L16 12.7759Z" fill="white"/>
-                        </svg>     
-                    </button>                   
-                </div>
-                <ul class="nav__items-list">
-                    <li><a href="#">Home</a></li>
-                    <li class="nav__item-search">
-                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6.85875 13.7175C3.07725 13.7175 0 10.641 0 6.85875C0 3.0765 3.07725 0 6.85875 0C10.6403 0 13.7175 3.07725 13.7175 6.85875C13.7175 10.6403 10.641 13.7175 6.85875 13.7175ZM6.85875 2.34225C4.368 2.34225 2.34225 4.36875 2.34225 6.85875C2.34225 9.34875 4.36875 11.3752 6.85875 11.3752C9.34875 11.3752 11.376 9.34875 11.376 6.85875C11.376 4.36875 9.3495 2.34225 6.85875 2.34225ZM13.806 11.6745C13.1933 12.5565 12.417 13.3155 11.5215 13.9103L15.6105 18L17.871 15.7402L13.806 11.6745Z" fill="white"/>
-                            </svg>                            
-                        <a href="#">Zoeken</a>
-                    </li>
-                    <li class="nav__item-program">
-                        <div class="program-tag">
-                            <a href="#">Programma</a>
-                            <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 1.132L1.06087 0L4.5015 3.7356L7.93913 0L9 1.132L4.5015 6L0 1.132Z" fill="white"/>
-                                </svg>                                
-                        </div>
-                        <ul class="nav__program-items">
-                            <li><a href="#">Vrijdag 17 juli</a></li>
-                            <li><a href="#">Vrijdag 17 juli</a></li>
-                            <li><a href="#">Vrijdag 17 juli</a></li>
-                            <li><a href="#">Vrijdag 17 juli</a></li>
-                            <li><a href="#">Vrijdag 17 juli</a></li>
-                            <li><a href="#">Vrijdag 17 juli</a></li>
-                            <li><a href="#">Vrijdag 17 juli</a></li>
-                            <li><a href="#">Vrijdag 17 juli</a></li>
-                            <li><a href="#">Vrijdag 17 juli</a></li>
-                            <li><a href="#">Vrijdag 17 juli</a></li>
-                            <li><a href="#">Vrijdag 17 juli</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">Nieuws</a>
-                    </li>
-                    <li>
-                        <a href="#">Info</a>
-                    </li>
-                </ul>
-              
-            </nav>
+            <div>
+                <div class="nav__items__search">
+                <input type="text" name="search" id="search" placeholder="Doorzoek het programma...">
+                <a href="">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                    <title>navigate</title>
+                    <path d="M16 31.5c-8.56 0-15.5-6.94-15.5-15.5s6.94-15.5 15.5-15.5 15.5 6.94 15.5 15.5-6.94 15.5-15.5 15.5zM16 28.5c6.903 0 12.5-5.597 12.5-12.5s-5.597-12.5-12.5-12.5c-6.903 0-12.5 5.597-12.5 12.5s5.597 12.5 12.5 12.5zM12.213 14.367l3.030 0.832c0.514 0.141 0.917 0.543 1.058 1.057l0.832 3.029 2.46-7.379-7.379 2.46zM6.613 15.964c-1.442-0.397-1.497-2.421-0.078-2.894l14.972-4.991c1.183-0.395 2.308 0.731 1.914 1.914l-4.991 14.972c-0.473 1.419-2.497 1.365-2.893-0.077l-1.923-7.002-7.001-1.922z"></path>
+                    </svg>
+                </a>
+                <form action="#">
+                    <select name="language" id="language">
+                        <option value="NL">NL</option>
+                        <option value="FR">FR</option>
+                    </select>
+                </form>
             </div>
+            <div class="nav__items-container hidden">
+                <nav class="nav__items">
+                    <div class="nav__close-btn">
+                        <button>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 12.7759L10.4567 7.58087L15.9233 2.33963L13.4587 0L7.984 5.26402L2.444 0.0727774L0 2.39279L5.54733 7.60745L0.0766667 12.8683L2.52067 15.1883L8.012 9.9243L13.5353 15.1155L16 12.7759Z" fill="white"/>
+                            </svg>     
+                        </button>                   
+                    </div>
+                    <ul class="nav__items-list">
+                        <li><a href="#">Home</a></li>
+                        <li class="nav__item-search">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.85875 13.7175C3.07725 13.7175 0 10.641 0 6.85875C0 3.0765 3.07725 0 6.85875 0C10.6403 0 13.7175 3.07725 13.7175 6.85875C13.7175 10.6403 10.641 13.7175 6.85875 13.7175ZM6.85875 2.34225C4.368 2.34225 2.34225 4.36875 2.34225 6.85875C2.34225 9.34875 4.36875 11.3752 6.85875 11.3752C9.34875 11.3752 11.376 9.34875 11.376 6.85875C11.376 4.36875 9.3495 2.34225 6.85875 2.34225ZM13.806 11.6745C13.1933 12.5565 12.417 13.3155 11.5215 13.9103L15.6105 18L17.871 15.7402L13.806 11.6745Z" fill="white"/>
+                            </svg>                            
+                            <a href="#">Zoeken</a>
+                        </li>
+                        <li class="nav__item-program">
+                            <div class="program-tag">
+                                <a href="#">Programma</a>
+                                <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 1.132L1.06087 0L4.5015 3.7356L7.93913 0L9 1.132L4.5015 6L0 1.132Z" fill="white"/>
+                                </svg>                                
+                            </div>
+                            <ul class="nav__program-items hidden">
+                                <li><a href="#">Vrijdag 17 juli</a></li>
+                                <li><a href="#">Vrijdag 17 juli</a></li>
+                                <li><a href="#">Vrijdag 17 juli</a></li>
+                                <li><a href="#">Vrijdag 17 juli</a></li>
+                                <li><a href="#">Vrijdag 17 juli</a></li>
+                                <li><a href="#">Vrijdag 17 juli</a></li>
+                                <li><a href="#">Vrijdag 17 juli</a></li>
+                                <li><a href="#">Vrijdag 17 juli</a></li>
+                                <li><a href="#">Vrijdag 17 juli</a></li>
+                                <li><a href="#">Vrijdag 17 juli</a></li>
+                                <li><a href="#">Vrijdag 17 juli</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Nieuws</a>
+                        </li>
+                        <li>
+                            <a href="#">Info</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            </div>
+            
             
             <div class="nav__hamburger">
                 <button>
@@ -217,7 +236,7 @@
                 </li>
             </ul>
         </article>
-        <article class="news__cards__container">
+        <article class="news__cards__container center-width">
             <ul class="news__cards">
                 <li class="news__card">
                     <div class="news__card__top">
@@ -258,7 +277,7 @@
                 <a href="">Bekijk alle nieuwsberichten</a>
             </section>
         </article>
-        <article class="slider__container">
+        <article class="slider__container center-width-large">
             <ul class="slider">
                 <li class="slide">
                     <picture>
@@ -280,7 +299,7 @@
                 </div>
             </div>
         </article>
-        <article class="twitter__feed-container">
+        <article class="twitter__feed-container center-width-large">
             
             <div class="twitter__top">
                 <div class="tweet__image">
@@ -316,6 +335,9 @@
                 </div>
             </div>
         </article>
+    </main>
+
+    <footer>
         <article class="newsletter-container">
             <section class="newsletter">
                 <div class="newsletter__top">
@@ -331,51 +353,43 @@
                 </form>
             </section>
         </article>
-    </main>
-
-    <footer>
         <footer class="footer__top">
-            <section>
-                <div class="footer__logo">
-                    <img src="#" alt="">
+            <section class="footer__logo">
+                <div >
+                    <img src="https://gentsefeesten.stad.gent/themes/custom/gf_theme/build/img/svg/GF-logo-NL.svg" alt="">
                 </div>
             </section>
             <section class="footer__text">
-                <h3>volg de gentse sfooeostesn socsial sgdsgij</h3>
-            </section>
-            <section class="footer__social">
-                <ul>
+                <div>
+                    <h3>Volg de Gentse Feesten op alle sociale media kanalen</h3>
+                </div>
+                
+                <ul class="social__links">
                     <li>
-                        <a href="">
-                            <svg></svg>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg"><path d="M21.37 7.277c.014.21.014.419.014.628 0 6.391-4.864 13.755-13.755 13.755-2.739 0-5.283-.793-7.424-2.17.39.045.764.06 1.168.06 2.26 0 4.34-.763 6.002-2.066a4.843 4.843 0 01-4.52-3.352c.299.045.598.074.913.074.434 0 .868-.06 1.272-.164a4.835 4.835 0 01-3.877-4.745v-.06c.644.36 1.392.584 2.185.614a4.831 4.831 0 01-2.155-4.026c0-.898.24-1.721.659-2.44a13.742 13.742 0 009.968 5.059 5.46 5.46 0 01-.12-1.108 4.832 4.832 0 014.835-4.834c1.392 0 2.649.584 3.532 1.527a9.518 9.518 0 003.068-1.168 4.821 4.821 0 01-2.125 2.664 9.692 9.692 0 002.784-.748 10.391 10.391 0 01-2.425 2.5z" fill="#000" fill-rule="nonzero"/></svg>
                         </a>
                     </li>
                     <li>
-                        <a href="">
-                            <svg></svg>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg"><path d="M21.37 7.277c.014.21.014.419.014.628 0 6.391-4.864 13.755-13.755 13.755-2.739 0-5.283-.793-7.424-2.17.39.045.764.06 1.168.06 2.26 0 4.34-.763 6.002-2.066a4.843 4.843 0 01-4.52-3.352c.299.045.598.074.913.074.434 0 .868-.06 1.272-.164a4.835 4.835 0 01-3.877-4.745v-.06c.644.36 1.392.584 2.185.614a4.831 4.831 0 01-2.155-4.026c0-.898.24-1.721.659-2.44a13.742 13.742 0 009.968 5.059 5.46 5.46 0 01-.12-1.108 4.832 4.832 0 014.835-4.834c1.392 0 2.649.584 3.532 1.527a9.518 9.518 0 003.068-1.168 4.821 4.821 0 01-2.125 2.664 9.692 9.692 0 002.784-.748 10.391 10.391 0 01-2.425 2.5z" fill="#000" fill-rule="nonzero"/></svg>
                         </a>
                     </li>
                     <li>
-                        <a href="">
-                            <svg></svg>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <svg></svg>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg"><path d="M21.37 7.277c.014.21.014.419.014.628 0 6.391-4.864 13.755-13.755 13.755-2.739 0-5.283-.793-7.424-2.17.39.045.764.06 1.168.06 2.26 0 4.34-.763 6.002-2.066a4.843 4.843 0 01-4.52-3.352c.299.045.598.074.913.074.434 0 .868-.06 1.272-.164a4.835 4.835 0 01-3.877-4.745v-.06c.644.36 1.392.584 2.185.614a4.831 4.831 0 01-2.155-4.026c0-.898.24-1.721.659-2.44a13.742 13.742 0 009.968 5.059 5.46 5.46 0 01-.12-1.108 4.832 4.832 0 014.835-4.834c1.392 0 2.649.584 3.532 1.527a9.518 9.518 0 003.068-1.168 4.821 4.821 0 01-2.125 2.664 9.692 9.692 0 002.784-.748 10.391 10.391 0 01-2.425 2.5z" fill="#000" fill-rule="nonzero"/></svg>
                         </a>
                     </li>
                 </ul>
             </section>
         </footer>
-        <footer class="footer__bottom">
+        <footer class="footer__bottom center-width">
             <section>
                 <div>
-                    <svg></svg>
+                    <img src="https://gentsefeesten.stad.gent/themes/custom/gf_theme/build/img/svg/partner-stad-gent.svg" alt="GENT">
                 </div>
                 <div>
-                    <p>fdgdqfgdgdfdgdsfg</p>
-                    <p>dfgdsgfdgfdgsgf</p>
+                    <p>Deze website is louter informatief en geldt niet als aanbod, mogelijke fouten op de website zijn niet de aansprakelijkheid van de Stad Gent.</p>
                 </div>
                 <div>
                     <a href="#">
@@ -385,5 +399,9 @@
             </section>
         </footer>
     </footer>
+
+    <script src="static/js/data.js"></script>
+    <script src="static/js/fetch.js"></script>
+    <script src="static/js/main.js"></script>
 </body>
 </html>

@@ -24,6 +24,7 @@ svg{
 button{
     border: none;
     background-color: transparent;
+    cursor: pointer;
 
 }
 
@@ -31,4 +32,14 @@ button{
     margin: 0 auto;
     width: 90rem;
     max-width: 100%;
+}
+
+.center-width-large{
+    margin: 0 auto;
+    width: 110rem;
+    max-width: 100%;
+}
+
+.hidden{
+    display: none;
 }
