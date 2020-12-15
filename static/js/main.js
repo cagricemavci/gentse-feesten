@@ -17,7 +17,7 @@
             this.days = []; //array of objects to be used such as full date, day of week, etc..
             let count = []; //check so that only unique days are being pushed to 'this.days' array
             this.events.forEach(event => {
-                if (count.indexOf(event.day) == -1) {
+                if (count.indexOf(event.day) === -1) {
                     let day = {
                         dayNum: event.day,
                         dayName: event.day_of_week,
@@ -59,10 +59,10 @@
         getRandomEventCard(){
             let $randomCard = document.querySelector('.random__cards')
 
-            if ($randomCard != null) {
+            if ($randomCard !== null) {
                 let str = "";
                 for (let i = 0; i < 3; i++) {
-                    let randomEvent = this.events[subfunctions.generateRandomNum(this.events.length)]; //laad drie random events op de pagina
+                    let randomEvent = this.events[subfunctions.generateRandomNum(this.events.length)]; //load three different -random- events from the events data
                     console.log(randomEvent)
                     str += `
                     <li class="random__card">
@@ -97,8 +97,8 @@
                 slug = new URLSearchParams(url).get('slug')
                 day = new URLSearchParams(url).get('day')
                 
-                event = this.events.filter(event => event.slug == slug && event.day == day)
-
+                event = this.events.filter(event => event.slug == slug && event.day == day)[0] //filter function to find the correct event, eerste element van de array
+                console.log('event', event)
                 //highlight the day in the days list
                 let daysList = document.querySelectorAll('.days li')
                 console.log('this', daysList)
@@ -111,6 +111,9 @@
                 
 
                 //add event details on the page
+                console.log('test',event.description)
+
+                document.querySelector('main').innerHTML += `<h1>${event.slug}</h1>`
 
             }
              console.log(url, slug, day, event)
@@ -161,7 +164,7 @@
         //SUBFUNCTIONS
         //--> see subfunctions.js
         
-        
+
         //INITIAL FUNCTIONS
         cacheElements() {
             this.$hamburger = document.querySelector('.nav__hamburger');
