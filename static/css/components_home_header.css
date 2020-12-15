@@ -146,6 +146,10 @@
     }
 }
 
+.program__up-arrow{
+    transform: rotate(180deg);
+}
+
 .nav__program-items {
     /* insert javascript to make it visible */
     /* display: none; */

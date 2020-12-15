@@ -27,7 +27,9 @@
                     count.push(event.day)
                 }
             })
-            console.log(this.days)
+
+            //sort the days so it is chronological
+            this.days.sort((subfunctions.compareDay))
 
             //use the event days to populate the html page
             this.populateDays();
@@ -60,11 +62,11 @@
             if ($randomCard != null) {
                 let str = "";
                 for (let i = 0; i < 3; i++) {
-                    let randomEvent = this.events[this.generateRandomNum(this.events.length)]; //laad drie random events op de pagina
+                    let randomEvent = this.events[subfunctions.generateRandomNum(this.events.length)]; //laad drie random events op de pagina
                     console.log(randomEvent)
                     str += `
                     <li class="random__card">
-                    <a href="detail.html?day=${randomEvent.day}&id=${randomEvent.id}">
+                    <a href="detail.html?day=${randomEvent.day}&slug=${randomEvent.slug}">
                         <div class="random-card__top">
                             <img src="${randomEvent.image !== null ? randomEvent.image.thumb : 'static/media/images/me_gusta.jpg'}" alt="${randomEvent.slug}">
                         </div>
@@ -87,30 +89,31 @@
         createDetailPage(){
             //check if this is the detail page
             let url = window.location.pathname;
-            let id, day = "";
+            let slug, day = "";
             let event = new Object; //the details of this event need to be shown
             if(url == '/detail.html'){
                 //find the correct event + correct day
                 url = window.location.search;
-                id = new URLSearchParams(url).get('id')
+                slug = new URLSearchParams(url).get('slug')
                 day = new URLSearchParams(url).get('day')
                 
-                event = this.events.filter(event => event.id == id && event.day == day)
+                event = this.events.filter(event => event.slug == slug && event.day == day)
 
                 //highlight the day in the days list
                 let daysList = document.querySelectorAll('.days li')
                 console.log('this', daysList)
-                daysList.forEach(e => {
-                    if(e.id == day) {
-                        e.classList.add('current');
-                        e.focus();
+                daysList.forEach(y => {
+                    if(y.id == day) {
+                        y.classList.add('current');
+                        y.focus();
                     }
                 });
+                
 
                 //add event details on the page
 
             }
-             console.log(url, id, day, event)
+             console.log(url, slug, day, event)
             
            
            
@@ -147,14 +150,18 @@
             let state = document.querySelector('.nav__program-items').classList.contains('hidden')
             if (state) {
                 document.querySelector('.nav__program-items').classList.remove('hidden')
+                document.querySelector('.program__down-arrow').classList.add('hidden')
+                document.querySelector('.program__up-arrow').classList.remove('hidden')
             } else {
                 document.querySelector('.nav__program-items').classList.add('hidden')
+                document.querySelector('.program__down-arrow').classList.remove('hidden')
+                document.querySelector('.program__up-arrow').classList.add('hidden')
             }
         },
         //SUBFUNCTIONS
-        generateRandomNum(max) {
-            return Math.floor(Math.random() * Math.floor(max))
-        },
+        //--> see subfunctions.js
+        
+        
         //INITIAL FUNCTIONS
         cacheElements() {
             this.$hamburger = document.querySelector('.nav__hamburger');
