@@ -197,6 +197,15 @@
     font-weight: bolder;
 }
 
+.slider__left svg{
+    transform: rotate(-180deg);
+ 
+}
+
+.slider__navigation svg{
+    margin-right: 1rem;
+}
+
 /* -----------twitter feed---------------- */
 
 .twitter__feed-container{

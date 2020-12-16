@@ -57,5 +57,5 @@ button:hover{
 }
 
 :focus{
-    border: 3px red dotted;
+    border: 6px red dotted;
 }

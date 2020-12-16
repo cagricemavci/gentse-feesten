@@ -50,12 +50,14 @@
 }
 
 
-
-.footer__top{
-    background-image: url('https://gentsefeesten.stad.gent/themes/custom/gf_theme/build/img/jpg/Gentse-feesten-01.jpg');
+.footer__bgimg{
+     background-image: url('https://gentsefeesten.stad.gent/themes/custom/gf_theme/build/img/jpg/Gentse-feesten-01.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+.footer__top{
+   
 
     height: 22rem;
     padding: 0rem 1rem 1rem 1rem;

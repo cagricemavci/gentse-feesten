@@ -1,9 +1,18 @@
-.nav__top {
-    background-image: url('https://gentsefeesten.stad.gent/themes/custom/gf_theme/build/img/jpg/Gentse-feesten-08.jpg');
+.nav__bgimg{
+      background-image: url('https://gentsefeesten.stad.gent/themes/custom/gf_theme/build/img/jpg/Gentse-feesten-08.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-position-x: 35%;
+
+}
+
+.nav__container{
+    position: relative;
+}
+
+.nav__top {
+  
 
     display: flex;
     justify-content: space-between;
