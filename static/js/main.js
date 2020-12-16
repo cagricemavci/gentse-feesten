@@ -12,8 +12,9 @@
         },
         //FUNCTIONS ONLY ***AFTER*** FETCH IS COMPLETED
         getDays() {
-            //get the days of the events and push them uniquely to an array
-            console.log(this.events[0]);
+            //dynamic listing of days. get the days of the events and push them uniquely to an array
+            console.log('dynamic listing of days has started...')
+            console.log('example of an event: ', this.events[0]);
             this.days = []; //array of objects to be used such as full date, day of week, etc..
             let count = []; //check so that only unique days are being pushed to 'this.days' array
             this.events.forEach(event => {
@@ -29,34 +30,45 @@
             })
 
             //sort the days so it is chronological
-            this.days.sort((subfunctions.compareDay))
+            this.days.sort((subfunctions.compareDay)) //subfunctions.js --> { subfunctions }
 
-            //use the event days to populate the html page
+            //use the generated days to populate the html page
             this.populateDays();
         },
         populateDays() {
-            //first populate the days on the filter
+            console.log('populating navigation days is started...')
+            //first populate the days in the filter-bar
             let $programDays = document.querySelector('.days')
 
-            $programDays.innerHTML = this.days.map((day) => {
+            if($programDays !== null) {
+                 $programDays.innerHTML = this.days.map((day) => {
                 return `
                 <li id="${day.dayNum}">
-                <a href="detail.html?day=${day.dayNum}">
-                    <span class="day--text">${day.dayName.slice(0,2)}</span>
-                    <span class="day--num">${day.dayNum} ${day.month}</span>
-                </a>
-            </li>
-               `
-            }).join('');
+                    <a href="detail.html?day=${day.dayNum}">
+                        <span class="day--text">${day.dayName.slice(0,2)}</span>
+                        <span class="day--num">${day.dayNum} ${day.month}</span>
+                    </a>
+                </li>
+                `
+                }).join('');
+            } else{
+                console.log('populating navigation on the filter bar is failed!')
+            }
 
             //secondly populate the days in the hamburger menu list
             let $navProgramDays = document.querySelector('.nav__program-items')
-            $navProgramDays.innerHTML = this.days.map((day) => {
+            if($navProgramDays !== null){
+                  $navProgramDays.innerHTML = this.days.map((day) => {
                 return `
                 <li><a href="detail.html?day=${day.dayNum}">${day.dayName} ${day.dayNum} ${day.month}</a></li>`
             }).join('')
+            } else{
+                console.log('populating days in hamburger menu list is failed!')
+            }
+          
         },
         getRandomEventCard(){
+            console.log('getting random events has started...')
             let $randomCard = document.querySelector('.random__cards')
 
             if ($randomCard !== null) {
@@ -81,6 +93,8 @@
                 }
 
                 $randomCard.innerHTML = str;
+            } else{
+                console.log('randomcard container to populate has not been found!')
             }
 
            
@@ -88,20 +102,21 @@
         },
         createDetailPage(){
             //check if this is the detail page
-            let url = window.location.pathname;
-            let slug, day = "";
-            let event = new Object; //the details of this event need to be shown
-            if(url == '/detail.html'){
+            let url = window.location.pathname.includes('/detail.html');//path can be --/detail.html-- OR --C:\\users\\name\\..\\detail.html--
+            let slug, day = ""; //matching parameters
+            let event = new Object; //the details of this 'soon to be filled'-eventObj need to be shown
+            if(url !== -1){
+                console.log('page is detail page, populating detail page is started...')
                 //find the correct event + correct day
                 url = window.location.search;
                 slug = new URLSearchParams(url).get('slug')
                 day = new URLSearchParams(url).get('day')
                 
-                event = this.events.filter(event => event.slug == slug && event.day == day)[0] //filter function to find the correct event, eerste element van de array
-                console.log('event', event)
+                event = this.events.filter(event => event.slug == slug && event.day == day)[0] //filter function to find the correct event, filter gives an array -> array[0]
+                console.log('populating detail with following event: ', event)
                 //highlight the day in the days list
                 let daysList = document.querySelectorAll('.days li')
-                console.log('this', daysList)
+                console.log('highlight the selected day using following daysList: ', daysList)
                 daysList.forEach(y => {
                     if(y.id == day) {
                         y.classList.add('current');
@@ -111,15 +126,111 @@
                 
 
                 //add event details on the page
-                console.log('test',event.description)
+                this.populateDetailPage(event); //found event as parameter to populate the event
 
-                document.querySelector('main').innerHTML += `<h1>${event.slug}</h1>`
-
+            } else {
+                console.log('not on detail page! on the following page: ', url)
             }
-             console.log(url, slug, day, event)
             
            
            
+        },
+        populateDetailPage(event) {
+            console.log('adding event details on the details page started...');
+
+            //detail__media is being populated
+            console.log('   detail__media is being populated...')
+            let str = `
+            <img src="${event.image.thumb !== null ? event.image.thumb : 'static/media/images/me_gusta.jpg'}"
+                    alt="${event.title}">
+                <iframe src="https://www.youtube.com/embed/9BbXrk2rZ9I" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>`;
+            document.querySelector('.detail__media').innerHTML = str;
+
+            //detail__info is being populated
+            console.log('   detail__info is being populated...')
+            str = `
+            <h2>${event.title}</h2>
+                    <time>
+                        <h3>${event.day_of_week} ${event.day} juli</h3>
+                        <svg class="program__right-arrow" width="9" height="6" viewBox="0 0 9 6" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 1.132L1.06087 0L4.5015 3.7356L7.93913 0L9 1.132L4.5015 6L0 1.132Z"
+                                fill="black" />
+                        </svg>
+                        <h3>${event.start}</h3>
+                        <svg class="program__right-arrow" width="9" height="6" viewBox="0 0 9 6" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 1.132L1.06087 0L4.5015 3.7356L7.93913 0L9 1.132L4.5015 6L0 1.132Z"
+                                fill="black" />
+                        </svg>
+                        <h3>${event.end}</h3>
+                    </time>`;
+                document.querySelector('.detail__info').innerHTML = str;
+
+            //detail__content is being populated
+            console.log('   detail__content is being populated...')
+            str =`
+            <p>${event.description}</p>`;
+            document.querySelector('.detail__content').innerHTML = str;
+            
+            //detail__practical is being populated
+            console.log('   detail__practical is being populated...')
+            str = `
+            <li>
+                <div class="practical__title">
+                    <p>website:</p>
+                </div>
+                <div class="practical__context">
+                    <p>${event.url}</p>
+                </div>
+            </li>
+            <li>
+                <div class="practical__title">
+                    <p>organisator:</p>
+                </div>
+                <div class="practical__context">
+                    <p>${event.organizer}</p>
+                </div>
+            </li>
+            <li>
+            <div class="practical__title">
+                <p>categoriën:</p>
+            </div>
+            <div class="practical__context">
+                ${event.category.map(x=>{return `<p>${x}</p>`}).join('')}
+            </div>
+        </li>`
+        document.querySelector('.detail__practical').innerHTML = str;
+        
+        //adding other events on events page - get other events from same organizer
+        console.log('   adding other events on events page is started...')
+        str = `
+        <h2>Andere evenementen van ${event.organizer}</h2>`
+        document.querySelector('.other-events__title').innerHTML = str;
+
+        let arrFromThisOrganizer = this.events.filter(e => e.organizer === event.organizer)
+        console.log('found events from the organizer: ', arrFromThisOrganizer)
+        document.querySelector('.other-events__list').innerHTML = arrFromThisOrganizer.map(e => {
+            return `
+            <li>
+                <a href="detail.html?day=${e.day}&slug=${e.slug}">
+                    <div>
+                        <h3>${e.day_of_week} - ${e.day} -- ${e.start}</h3>
+                    </div>
+                    <div>
+                        <h3>${e.title}</h3>
+                    </div>
+                    <div>
+                        <p>${e.organizer}</p>
+                    </div>
+                </a>
+            </li>`
+        }).join('')
+
+        document.querySelector('.other-events__organisator').innerHTML = `<a href="#">Alle events van deze organisator</a>`
+
         },
         //FETCH FUNCTIONS
         loadEvents() {
@@ -128,7 +239,7 @@
             })
         },
         saveEvents(events) {
-            console.log(events)
+            console.log('save events is running...', events)
             this.events = events
 
             this.initializeAfterEvents(); //fetch is done, the function for after fetch can start
@@ -136,6 +247,7 @@
         },
         //initialize the functions that require the fetch events to be completed, such as event data
         initializeAfterEvents() {
+            console.log('functions after fetch-save events are started...')
             this.getDays();
             this.getRandomEventCard();
             this.createDetailPage();

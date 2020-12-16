@@ -7,7 +7,7 @@ const subfunctions = {
         let first = a.dayNum
         let second = b.dayNum
 
-        let comp = 0;
+        let comp = 0; //comparison
 
         if (first > second) {
             comp = 1;
@@ -15,5 +15,8 @@ const subfunctions = {
             comp = -1;
         }
         return comp;
+    },
+    findInArray(str) {
+        
     }
 }
