@@ -1,5 +1,5 @@
-.nav__bgimg{
-      background-image: url('https://gentsefeesten.stad.gent/themes/custom/gf_theme/build/img/jpg/Gentse-feesten-08.jpg');
+.nav__bgimg {
+    background-image: url('https://gentsefeesten.stad.gent/themes/custom/gf_theme/build/img/jpg/Gentse-feesten-08.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -7,12 +7,12 @@
 
 }
 
-.nav__container{
+.nav__container {
     position: relative;
 }
 
 .nav__top {
-  
+
 
     display: flex;
     justify-content: space-between;
@@ -121,6 +121,10 @@
     }
 }
 
+.nav__items-list a:hover {
+    border-bottom: 3px solid #fff;
+    opacity: 1;
+}
 
 
 .nav__item-search {
@@ -155,7 +159,7 @@
     }
 }
 
-.program__up-arrow{
+.program__up-arrow {
     transform: rotate(180deg);
 }
 
@@ -371,20 +375,20 @@
     font-size: 1rem;
 }
 
-.days li.current{
+.days li.current {
     background-color: #fff;
 }
 
-.days li.current a{
+.days li.current a {
     color: #000;
 }
 
 @media (min-width: 80rem) {
-    .days li.current{
+    .days li.current {
         background-color: #000;
     }
-    
-    .days li.current a{
+
+    .days li.current a {
         color: #fff;
     }
 }

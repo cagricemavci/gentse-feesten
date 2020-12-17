@@ -1,13 +1,13 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-header{
+header {
     position: relative;
 }
 
-body{
+body {
     font-family: 'raleway', 'sans-serif';
 }

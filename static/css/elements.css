@@ -1,61 +1,66 @@
-
-a{
+a {
     color: #fff;
     text-decoration: none;
 
     font-size: 1.5rem;
     font-weight: 700;
+
+    transition: 0.4s ease;
 }
 
-a:hover{
+a:hover {
     opacity: 0.8;
 }
-li{
+
+li {
     list-style: none;
+    transition: 0.4s ease;
 }
 
 
 img {
-    width: 15rem;
+    width: 20rem;
+    height: 18rem;
 }
 
-svg{
+svg {
     width: 2rem;
     height: 2rem;
 }
 
-button{
+button {
     border: none;
     background-color: transparent;
     cursor: pointer;
 
+    transition: 0.4s ease;
 }
 
-button:hover{
+button:hover {
     opacity: 0.8;
 }
 
-.center-width{
+.center-width {
     margin: 0 auto;
     width: 90rem;
     max-width: 100%;
 }
 
-.center-width-large{
+.center-width-large {
     margin: 0 auto;
     width: 110rem;
     max-width: 100%;
 }
 
-.hidden{
+.hidden {
     display: none;
 }
 
-.current{
+.current {
     border-bottom: 3px solid #fff;
 
 }
 
-:focus{
+:focus {
     border: 6px red dotted;
 }

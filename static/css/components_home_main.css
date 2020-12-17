@@ -1,34 +1,34 @@
-.random__cards-container{
+.random__cards-container {
     padding: 1rem;
 }
 
 
-.random__cards{
+.random__cards {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
 }
 
-.random__card{
+.random__card {
     margin: 0.5rem;
-    flex-grow: 1;
+    /* flex-grow: 1; */
     flex-shrink: 1;
     flex-basis: 22rem;
     max-width: 100%;
 
-    
+
 }
 
-.random-card__top img{
+.random-card__top img {
     width: 100%;
-    height: auto;
+    /* height: auto; */
     object-fit: cover;
     object-position: center;
 }
 
 
-.random-card__bottom{
+.random-card__bottom {
     color: #000;
     margin-left: 3rem;
     position: relative;
@@ -37,23 +37,23 @@
 
 }
 
-.random-card__bottom time{
+.random-card__bottom time {
     background-color: #000;
     color: #fff;
     padding: 0.8rem 1rem;
     margin-bottom: 1rem;
 }
 
-.random-card__bottom h3{
+.random-card__bottom h3 {
     font-size: 2.4rem;
     margin-top: 2rem;
     margin-bottom: 1.2rem;
-  
+
     font-weight: 700;
-    
+
 }
 
-.random-card__bottom p{
+.random-card__bottom p {
     font-weight: lighter;
     font-style: normal;
 }
@@ -62,12 +62,12 @@
 /* --------------------rdtgfd------------ */
 
 
-.news__cards__container{
+.news__cards__container {
     padding: 1rem;
     margin-bottom: 4rem;
 }
 
-.news__cards{
+.news__cards {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -76,7 +76,7 @@
     margin-bottom: 3rem;
 }
 
-.news__card{
+.news__card {
     flex-grow: 1;
     flex-basis: 100%;
 
@@ -86,26 +86,26 @@
     flex-wrap: wrap;
 }
 
-.news__card__top{
+.news__card__top {
     flex-basis: 100%;
     position: relative;
 }
 
 @media(min-width: 62rem) {
-    .news__card__top{
-    flex-basis: 50%;
-    margin-right: 3rem;
+    .news__card__top {
+        flex-basis: 50%;
+        margin-right: 3rem;
     }
 }
 
-.news__card__top img{
+.news__card__top img {
     width: 100%;
     height: auto;
     object-fit: cover;
     object-position: center;
 }
 
-.news__card__top p{
+.news__card__top p {
     position: absolute;
     bottom: 0rem;
 
@@ -115,7 +115,7 @@
 }
 
 @media(min-width: 62rem) {
-    .news__card__top p{
+    .news__card__top p {
         position: absolute;
         bottom: 50%;
         transform: translateX(-30%) rotate(-90deg);
@@ -123,34 +123,37 @@
 
     }
 }
+
 @media(min-width: 62rem) {
-    .news__card__bottom{
-    flex-basis: 45%;
+    .news__card__bottom {
+        flex-basis: 45%;
     }
 }
 
-.news__card__bottom h3{
+.news__card__bottom h3 {
     font-size: 2.4rem;
     margin-top: 2rem;
     margin-bottom: 1.2rem;
-  
+
     font-weight: 700;
 }
 
-.news__card__bottom p{
+.news__card__bottom p {
     font-size: 1.5rem;
     font-weight: lighter;
     font-style: normal;
     margin-bottom: 1.2rem;
 }
 
-.news__card__bottom svg{
-   width: 2rem;
+.news__card__bottom svg {
+    width: 2rem;
 }
-.news__cards__show-more{
-   display: inline;
+
+.news__cards__show-more {
+    display: inline;
 }
-.news__cards__show-more a{
+
+.news__cards__show-more a {
     color: #000;
     border: 3px solid #000;
     display: inline;
@@ -158,30 +161,31 @@
 }
 
 /* --------------slider------------ */
-.slider__container{
+.slider__container {
     position: relative;
     margin-bottom: 2rem;
 }
-.slider{
+
+.slider {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
 }
 
-.slide{
+.slide {
     flex-grow: 1;
     flex-basis: 100%;
 }
 
-.slide img{
+.slide img {
     width: 100%;
     height: auto;
     object-fit: cover;
     object-position: center;
 }
 
-.slider__navigation{
+.slider__navigation {
     background-color: #fff;
     padding: 0.8rem 1rem;
     position: absolute;
@@ -197,18 +201,18 @@
     font-weight: bolder;
 }
 
-.slider__left svg{
+.slider__left svg {
     transform: rotate(-180deg);
- 
+
 }
 
-.slider__navigation svg{
+.slider__navigation svg {
     margin-right: 1rem;
 }
 
 /* -----------twitter feed---------------- */
 
-.twitter__feed-container{
+.twitter__feed-container {
     margin-bottom: 3rem;
     padding: 1rem;
 
@@ -219,12 +223,12 @@
 }
 
 @media(min-width: 62rem) {
-    .twitter__feed-container{
+    .twitter__feed-container {
         padding: 0;
     }
 }
 
-.twitter__feeds{
+.twitter__feeds {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -233,7 +237,7 @@
     margin-bottom: 3rem;
 }
 
-.twitter__feed{
+.twitter__feed {
     flex-grow: 1;
     flex-basis: 100%;
 
@@ -244,7 +248,7 @@
 
 }
 
-.twitter__top{
+.twitter__top {
     flex-basis: 100%;
     max-width: 100%;
     margin: 1rem auto;
@@ -252,29 +256,30 @@
 }
 
 @media(min-width: 62rem) {
-    .twitter__top{
+    .twitter__top {
         flex-basis: 40%;
         margin: 0 2rem 0 0;
     }
 }
-.twitter__top img{
+
+.twitter__top img {
     width: 100%;
     height: auto;
     object-fit: cover;
     object-position: center;
 }
 
-.twitter__bottom{
+.twitter__bottom {
     flex-basis: 100%;
 }
 
 @media(min-width: 62rem) {
-    .twitter__bottom{
+    .twitter__bottom {
         flex-basis: 50%;
     }
 }
 
-.tweet__tag{
+.tweet__tag {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -282,7 +287,7 @@
     margin-bottom: 2rem;
 }
 
-.tweet__tag svg{
+.tweet__tag svg {
     flex-basis: auto;
     height: auto;
     width: 10rem;
@@ -290,24 +295,25 @@
 }
 
 @media(min-width:62rem) {
-    .tweet__tag svg{
+    .tweet__tag svg {
         width: 15rem;
     }
 }
-.tweet__tag .twitter-icon{
+
+.tweet__tag .twitter-icon {
     width: 3rem;
 }
 
-.tweet__follow{
+.tweet__follow {
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 
-.tweet__content{
+.tweet__content {
     width: 100%;
 }
 
-.tweet{
+.tweet {
     height: 11rem;
     display: flex;
     justify-content: flex-start;
@@ -316,18 +322,18 @@
 
 }
 
-.tweet__text{
+.tweet__text {
     flex-basis: 100%;
 }
 
-.twitter__dots{
+.twitter__dots {
     display: flex;
     justify-content: center;
     align-items: center;
 
 }
 
-.twitter__dot{
+.twitter__dot {
     width: 1rem;
     height: 1rem;
     border-radius: 50%;

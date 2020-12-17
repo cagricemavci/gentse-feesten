@@ -1,46 +1,45 @@
-
-.newsletter-container{
+.newsletter-container {
     padding: 1rem;
     width: 45rem;
     max-width: 100%;
     margin: 0rem auto;
 }
 
-.newsletter__top h3{
+.newsletter__top h3 {
     font-size: 2rem;
     font-weight: bolder;
     margin-bottom: 1rem;
 }
 
-.newsletter__top p{
+.newsletter__top p {
     margin: 1.8rem auto;
     line-height: 1.5;
     font-size: 1.2rem;
 }
 
-.newsletter__form{
+.newsletter__form {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     flex-wrap: wrap;
 }
 
-.newsletter__form label{
+.newsletter__form label {
     flex-basis: 100%;
     margin-bottom: 0.5rem;
     font-size: 1.5rem;
 }
 
-.newsletter__form input{
+.newsletter__form input {
     flex-basis: 70%;
     flex-grow: 1;
-   border: none;
-   background-color: #e9e9e9;
-   height: 3rem;
-   padding: 0.8rem 1rem;
+    border: none;
+    background-color: #e9e9e9;
+    height: 3rem;
+    padding: 0.8rem 1rem;
 }
 
-.newsletter__form button{
+.newsletter__form button {
     flex-basis: 30%;
     background-color: #000;
     color: #fff;
@@ -51,47 +50,47 @@
 }
 
 
-.footer__bgimg{
-     background-image: url('https://gentsefeesten.stad.gent/themes/custom/gf_theme/build/img/jpg/Gentse-feesten-01.jpg');
+.footer__bgimg {
+    background-image: url('https://gentsefeesten.stad.gent/themes/custom/gf_theme/build/img/jpg/Gentse-feesten-01.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
-.footer__top{
-   
+
+.footer__top {
+
 
     height: 22rem;
     padding: 0rem 1rem 1rem 1rem;
-    
+
     display: flex;
     align-items: stretch;
     justify-content: flex-start;
     flex-wrap: wrap;
 }
 
-.footer__logo{
+.footer__logo {
     flex-basis: 100%;
 }
 
-.footer__logo img{
-    background-color: #fff;
+.footer__logo img {
     padding: 2rem;
 }
 
-.footer__text{
+.footer__text {
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
     justify-content: flex-start;
 }
 
-.footer__text h3{
+.footer__text h3 {
     background-color: #000;
     color: #fff;
     font-size: 1.8rem;
 }
 
-.social__links{
+.social__links {
     flex-basis: 100%;
 
     display: flex;
@@ -100,7 +99,7 @@
     margin-right: 2rem;
 }
 
-.social__links a{
+.social__links a {
     background-color: #fff;
     margin-right: 1rem;
     display: flex;
@@ -111,9 +110,10 @@
 
 }
 
-.social__links a:hover{
+.social__links a:hover {
     background-color: #000;
 }
-.social__links a:hover svg{
+
+.social__links a:hover svg {
     fill: #fff;
 }

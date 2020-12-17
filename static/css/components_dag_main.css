@@ -1,26 +1,29 @@
-.filter__wrapper{
+.filter__wrapper {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    
+    flex-wrap: wrap;
+
     margin-bottom: 5rem;
     margin-top: 5rem;
 }
 
-.filter__wrapper h3{
+.filter__wrapper h3 {
     color: #fff;
 }
 
-.filter__wrapper svg{
+.filter__wrapper svg {
     fill: #fff;
 }
 
-.filter__index{
+.filter__index {
     flex-basis: 20%;
     margin-right: 5rem;
+
+
 }
 
-.filter__list li{
+.filter__list li {
     margin: 1rem auto;
     padding: 0.8rem 1rem;
     display: flex;
@@ -30,26 +33,38 @@
     background-color: #000;
 }
 
-.filter__icon{
+.filter__icon {
     flex-basis: 30%;
 }
 
-.filter__items-container{
+.filter__items-container {
     flex-basis: 70%;
     flex-grow: 1;
 }
 
-.filter__items-container{
+.filter__items-container {
     background-color: #000;
     padding: 2rem 3rem;
 }
 
-.filter__items{
+.filter__items {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
-.filter__item{
-    flex-basis: 50%;
+.filter__item {
+    flex-basis: 25rem;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.filter__item a {
+    display: block;
+}
+
+.program__category-title .random__card {
+    flex-grow: 0;
 }
