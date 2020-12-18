@@ -5,7 +5,9 @@ a {
     font-size: 1.5rem;
     font-weight: 700;
 
-    transition: 0.4s ease;
+    transition: 0.3s ease;
+    line-height: 1;
+    border-bottom: 3px solid transparent;
 }
 
 a:hover {
@@ -26,6 +28,7 @@ img {
 svg {
     width: 2rem;
     height: 2rem;
+    transition: 0.4s ease;
 }
 
 button {

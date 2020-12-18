@@ -117,7 +117,7 @@
 
 @media (min-width:80rem) {
     .nav__items-list li {
-        margin: 1rem 1rem;
+        margin: 1rem;
     }
 
     .nav__items-list svg {
@@ -125,9 +125,11 @@
     }
 }
 
+
 .nav__items-list a:hover {
     border-bottom: 3px solid #fff;
     opacity: 1;
+
 }
 
 

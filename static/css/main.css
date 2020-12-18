@@ -11,3 +11,7 @@ header {
 body {
     font-family: 'raleway', 'sans-serif';
 }
+footer{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}

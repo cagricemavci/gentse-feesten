@@ -59,14 +59,13 @@
 
 .footer__top {
 
-
-    height: 22rem;
     padding: 0rem 1rem 1rem 1rem;
 
     display: flex;
     align-items: stretch;
     justify-content: flex-start;
     flex-wrap: wrap;
+
 }
 
 .footer__logo {
@@ -82,6 +81,8 @@
     flex-wrap: wrap;
     align-items: stretch;
     justify-content: flex-start;
+
+    margin-bottom: 3rem;
 }
 
 .footer__text h3 {
@@ -116,4 +117,22 @@
 
 .social__links a:hover svg {
     fill: #fff;
+}
+
+.footer__bottom section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer__bottom a{
+    color: #000;
+}
+
+.footer__bottom img{
+    width: 5rem;
+}
+
+.footer__bottom section div {
+    margin-right: 3rem;
 }
