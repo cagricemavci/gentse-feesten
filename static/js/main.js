@@ -239,7 +239,7 @@
             <li>
                 <a href="detail.html?day=${e.day}&slug=${e.slug}">
                     <div>
-                        <h3>${e.day_of_week} - ${e.day} -- ${e.start}</h3>
+                        <h3>${e.day_of_week} ${e.day} -- ${e.start}</h3>
                     </div>
                     <div>
                         <h3>${e.title}</h3>
