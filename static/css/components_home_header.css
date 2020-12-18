@@ -85,6 +85,10 @@
     align-items: center;
 }
 
+.nav__close-btn:hover svg{
+    transform: rotate(360deg);
+}
+
 @media(min-width: 80rem) {
     .nav__close-btn {
         display: none;
