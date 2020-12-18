@@ -151,6 +151,7 @@
 
 .news__cards__show-more {
     display: inline;
+    
 }
 
 .news__cards__show-more a {
@@ -158,6 +159,7 @@
     border: 3px solid #000;
     display: inline;
     padding: 1.6rem 2rem;
+    display: inline-block;
 }
 .news__cards__show-more a:hover{
     color: #fff;
@@ -168,6 +170,10 @@
 .slider__container {
     position: relative;
     margin-bottom: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .slider {
@@ -175,15 +181,25 @@
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
+    flex-grow: 1;
+    flex-basis: 100%;
 }
 
 .slide {
     flex-grow: 1;
     flex-basis: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .slide img {
-    width: 100%;
+    flex-basis: 100%;
+    flex-grow: 1;
+    width: 62rem;
+    max-width: 100%;
     height: auto;
     object-fit: cover;
     object-position: center;
