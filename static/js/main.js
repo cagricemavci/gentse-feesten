@@ -82,7 +82,7 @@
                     <li class="random__card">
                     <a href="detail.html?day=${randomEvent.day}&slug=${randomEvent.slug}">
                         <div class="random-card__top">
-                            <img src="${randomEvent.image !== null ? randomEvent.image.thumb : 'static/media/images/anatolian_sheperd.jpg'}" alt="${randomEvent.slug}">
+                            <img src="${randomEvent.image !== null ? randomEvent.image.thumb : errorImage.imageNotFound}" alt="${randomEvent.slug}">
                         </div>
                         <div class="random-card__bottom">
                             <time datetime="2019-07-17">${randomEvent.day_of_week.slice(0,2)} ${randomEvent.day} Jul ${randomEvent.start} u.</time>
@@ -103,7 +103,7 @@
                     <li class="random__card">
                     <a href="detail.html?day=${randomEvent.day}&slug=${randomEvent.slug}">
                         <div class="random-card__top">
-                            <img src="${randomEvent.image !== null ? randomEvent.image.thumb : 'static/media/images/anatolian_sheperd.jpg'}" alt="${randomEvent.slug}">
+                            <img src="${randomEvent.image !== null ? randomEvent.image.thumb : errorImage.imageNotFound}" alt="${randomEvent.slug}">
                         </div>
                         <div class="random-card__bottom">
                             <time datetime="2019-07-17">${randomEvent.day_of_week.slice(0,2)} ${randomEvent.day} Jul ${randomEvent.start} u.</time>
@@ -163,7 +163,7 @@
             //detail__media is being populated
             console.log('   detail__media is being populated...')
             let str = `
-            <img src="${event.image !== null ? event.image.thumb : 'static/media/images/anatolian_sheperd.jpg'}"
+            <img src="${event.image !== null ? event.image.thumb : errorImage.imageNotFound}"
                     alt="${event.title}">
                 <iframe src="https://www.youtube.com/embed/9BbXrk2rZ9I" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -319,7 +319,7 @@
                         <li class="random__card">
                             <a href="detail.html?day=${e.day}&slug=${e.slug}">
                                 <div class="random-card__top">
-                                    <img src="${e.image !== null ? e.image.thumb : 'static/media/images/anatolian_sheperd.jpg'}" alt="${e.slug}">
+                                    <img src="${e.image !== null ? e.image.thumb : errorImage.imageNotFound}" alt="${e.slug}">
                                 </div>
                                 <div class="random-card__bottom">
                                     <time datetime="2019-07-17">${e.day_of_week.slice(0,2)} ${e.day} Jul ${e.start} u.</time>
@@ -347,11 +347,11 @@
 
             if ($news !== null) {
                 for (let i = 0; i < 3; i++) {
-                    let randomNews = this.news[subfunctions.generateRandomNum(this.news.length)]; //load three different -random- events from the events data
+                    let randomNews = this.news[subfunctions.generateRandomNum(this.news.length)]; //load three different -random- events from the events data - subfuntion --> subfunction.js
                     str += `
                     <li class="news__card">
                     <div class="news__card__top">
-                        <img src="${randomNews.picture.medium ? randomNews.picture.medium : 'static/media/images/anatolian_sheperd.jpg'}"
+                        <img src="${randomNews.picture.medium ? randomNews.picture.medium : errorImage.imageNotFound}"
                             alt="${randomNews.title}">
                         <p>${subfunctions.convertTime(randomNews.publishedAt)}</p>
                     </div>

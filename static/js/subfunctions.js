@@ -1,6 +1,6 @@
 const subfunctions = {
     generateRandomNum(max) {
-        return Math.floor(Math.random() * Math.floor(max)) //return a random number limited to the amount of events
+        return Math.floor(Math.random() * Math.floor(max)) //return a random number limited to the amount of given max value (events)
     },
     compareDay(a, b) {
         //compare values so it can be sorted, such as an array of numbers
@@ -24,6 +24,7 @@ const subfunctions = {
 
         month = month < 10 ? ('0' + month) : month;
         day = day < 10 ? ('0' + day) : day;
+        // example: 01/01
 
         return `${day} / ${month}`
     }
