@@ -272,6 +272,7 @@
 
 .hashtag-top svg {
     width: 10rem;
+    max-width: 100%;
     height: auto;
 }
 
@@ -288,6 +289,7 @@
 
 .hashtag-bottom svg {
     width: 18rem;
+    max-width: 100%;
     height: auto;
 }
 

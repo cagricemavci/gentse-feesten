@@ -31,6 +31,7 @@ a{
 img {
     width: 20rem;
     height: auto;
+    max-width: 100%;
 }
 
 svg {
